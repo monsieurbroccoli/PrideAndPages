@@ -1,0 +1,68 @@
+body {
+    background: pink;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* macht Anker weich scrollend */
+}
+
+header {
+    padding-top: 120px; /* verhindert Überlappung mit fixed nav */
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.home-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.home-text {
+    flex: 2;
+}
+
+.home-image {
+    flex: 1;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    padding: 10px;
+    z-index: 1000; /* Navigation nach vorne holen */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sektionen */
+section {
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
