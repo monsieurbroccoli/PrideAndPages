@@ -76,12 +76,41 @@
     <section id="reserve">
         <!-- TODO Formular fertigstellen-->
         <h2>Tisch reservieren</h2>
-        <form>
-            <label>Name: <input type="text"></label><br>
-            <label>Personen: <input type="number"></label><br>
-            <label>Datum: <input type="date"></label><br>
-            <label>Uhrzeit: <input type="time"></label><br>
-            <button>Reservieren</button>
+        <p>Gerne nehmen wir deine Reservierung für einen Tisch in unserem Café entgegen. Bitte beachte, dass wir nur Reservierungen über dieses Formular entgegennehmen können. Du erhälst von uns eine E-Mail zur Bestätigung deiner Reservierung</p><br>
+        <p>Alle Felder mit einem Stern (*) sind Pflichtfelder.</p>
+        <form action=""> <!--TODO Formular funktioniert noch nicht-->
+            <fieldset>
+                <legend>Persönliche Informationen</legend>
+                    <label for"pronomen">Pronomen</label>
+                        <input id="pronomen" name="pronomen" type="text" required maxlength="20"><br/>
+                    <label for="name"> Vorname* </label> 
+                        <input id="name" name="vorname" type="text" required maxlength="20"><br/>
+                    <label for="surname"> Nachname* </label>
+                        <input id="surname" name="nachname" type="text" required maxlength="20"><br/>
+                    <label for="birth">Geburtstdatum* (min. 18 Jahre alt)</label>
+                        <input id="birth" name="geburtsdatum" type="date" required max="2007-11-23"><br/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kontakt</legend>
+                    <label for="mail">E-Mail*</label>
+                        <input id="mail" name="mail" type="email" required maxlength="40"><br/>
+                    <label for="tel">Telefonnummer*</label>
+                        <input id="tel" name="tel" type="tel" required maxlength="20"><br/>
+            </fieldset>
+        
+            <fieldset>
+                <label>Angaben zum Besuch</label>
+                    <label for"datum">Datum</label>
+                        <input id="datum" name="Datum" type="date" required><br/> <!--TODO Datum kann in der Vergangenheit liegen -->
+                    <label for "uhrzeit">Uhrzeit</label>
+                        <input id="uhrzeit" name "Uhrzeut" type="time" required><br/> <!--TODO Uhrzeit an Öffnungszeiten anpassen-->
+                    <label for"personen>Anzahl der Personen</label>
+                        <input id="personen" name="Personen" type="number" required maxlength="10"><br/>
+                    <label for="sonstiges">Sonstige Angaben oder Hinweise zur Reservierung</label>
+                        <textarea id="sonstiges" title="Hier kannst weitere Hinweise zur Reservierung hinterlegen" name="sonstiges" rows="4" cols="40" maxlength="100"></textarea>
+            </fieldset>
+            <button>Reservierungsabfrage abschicken</button>
         </form>
     </section>
 
